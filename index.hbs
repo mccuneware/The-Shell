@@ -18,6 +18,9 @@
 {{! The main content area on the homepage }}
 <main class="content" role="main">
 
+    {{!! Before all the posts, we have the previous/next pagination links }}
+    {{pagination}}
+
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
@@ -28,8 +31,8 @@
             
             <!--<a href="{{url}}#disqus_thread"></a>-->
         </header>
-        <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
+        <section class="post-content">
+            {{content}}
         </section>
     </article>
 
